@@ -5,6 +5,8 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Print Hello
         run: echo "Hello World"
       - name : set up node js

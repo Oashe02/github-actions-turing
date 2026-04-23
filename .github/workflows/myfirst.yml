@@ -1,0 +1,15 @@
+name: Print Hello World
+on:
+  push:
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello World"
+      - name : set up node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - name: add bymbers
+        run: node start.js
